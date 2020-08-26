@@ -1,0 +1,25 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.leader-board {
+  font-size: 1em;
+  font-weight: 300;
+  width: 250px;
+  margin: 0 auto;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid $base-color + 40%;
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-device-width : 768px) {
+  .leader-board { 
+    width: 500px;
+  }
+}
