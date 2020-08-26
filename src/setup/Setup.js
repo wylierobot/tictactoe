@@ -16,8 +16,8 @@ class Setup extends Component {
     this.onFormSubmit_ = this.onFormSubmit_.bind(this);
 
     this.state = {
-      playerOneName: '',
-      playerTwoName: '',
+      playerOneName: 'Player1',
+      playerTwoName: 'Player2',
     }
   }
 
@@ -71,7 +71,7 @@ class Setup extends Component {
    * @inheritdoc
    **/
   render() {
-    let disabled = this.disableForm_();
+    // let disabled = this.disableForm_();
 
     return (
       <div className="tic-tac-toe-app">
@@ -79,11 +79,13 @@ class Setup extends Component {
           <div className="collumn">
             <div className="player">
               <div className="icon-x"></div>
+              <img src="./images/aecom_ststwincaverns2_ppt_marmot1.png" alt="Player1" />
             </div>
             <input
               type="text"
               value={this.state.playerOneName}
               placeholder="Player one"
+              // value="Player1"
               onChange={this.onPlayerOneNameChange_}
               id="playerOne" />
           </div>
@@ -91,16 +93,18 @@ class Setup extends Component {
           <div className="collumn">
             <div className="player">
               <div className="icon-circle"></div>
+              <img src="./images/aecom_ststwincaverns2_ppt_marmot8.png" alt="Player2" />
             </div>
             <input
               type="text"
               value={this.state.playerTwoName}
+              // value="Player2"
               placeholder="Player two"
               onChange={this.onPlayerTwoNameChange_}
               id="playerTwo" />
           </div>
         </div>
-        <button disabled={disabled} onClick={this.onFormSubmit_}> Start! </button>
+        <button disabled={false} onClick={this.onFormSubmit_}> Start! </button>
       </div>
     );
   }

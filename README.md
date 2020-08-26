@@ -19,7 +19,9 @@ firebase deploy <br />
 rm -rf .git <br/>
 git init <br/>
 git add . <br/>
-git commit -am "1st commit" <br/>
+git remote add origin git@gitlab.com:aecom.portal2/game-tictactoe.git <br/>
+git push -u origin master <br/>
+(git push) <br/>
 npm i <br/>
 npm run start <br/>
 (browser)<br/>
